@@ -11,14 +11,17 @@ var tpl *template.Template
 
 //Parsing initial templates removes need to parse at response function.
 func init() {
-	tpl = template.Must(template.ParseGlob("views/*.gohtml"))
+	tpl = template.Must(template.ParseGlob("views/templates/*.gohtml"))
 }
 
 //Router
 func main() {
-	http.HandleFunc("/", login)
 	http.HandleFunc("/register/", register)
 	http.HandleFunc("/login/", login)
+
+	//Static Fileserver
+	//http.Handle("login/assets/css/",
+	//http.StripPrefix("/login/assets/css", http.FileServer(http.Dir("./views"))))
 
 	http.ListenAndServe(":8080", nil)
 }
