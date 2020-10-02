@@ -20,10 +20,11 @@ func main() {
 	http.HandleFunc("/login/", login)
 
 	//Static Fileserver
-	//http.Handle("login/assets/css/",
-	//http.StripPrefix("/login/assets/css", http.FileServer(http.Dir("./views"))))
+	fs := http.StripPrefix("/views/", http.FileServer(http.Dir("views")))
+	http.Handle("/views/", fs)
 
 	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", fs)
 }
 
 //Login page handler
