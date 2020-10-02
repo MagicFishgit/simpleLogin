@@ -16,6 +16,7 @@ func init() {
 
 //Router
 func main() {
+	http.HandleFunc("/", index)
 	http.HandleFunc("/register/", register)
 	http.HandleFunc("/login/", login)
 
@@ -25,6 +26,14 @@ func main() {
 
 	http.ListenAndServe(":8080", nil)
 	http.ListenAndServe(":8080", fs)
+}
+
+//Index page handler
+func index(w http.ResponseWriter, req *http.Request) {
+	err := tpl.ExecuteTemplate(w, "index.gohtml", nil)
+	if err != nil {
+		log.Fatalln(w, http.StatusInternalServerError, err)
+	}
 }
 
 //Login page handler
