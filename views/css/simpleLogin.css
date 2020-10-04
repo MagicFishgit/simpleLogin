@@ -10,3 +10,8 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.input-group-rounded .input-group-field {
+  border-radius: 0 5000px 5000px 0;
+  padding-left: 1rem;
+}
