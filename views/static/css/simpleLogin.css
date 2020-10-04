@@ -1,0 +1,12 @@
+.borderOutline {
+  border-style: solid;
+  border-color: black;
+  border-width: 0.1em;
+}
+
+.sideBackground {
+  background-image: url("../../views/img/loginBeach.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
