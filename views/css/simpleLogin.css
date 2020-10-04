@@ -12,6 +12,11 @@
 }
 
 .input-group-rounded .input-group-field {
-  border-radius: 0 5000px 5000px 0;
+  border-radius: 0 10px 10px 0;
+  padding-left: 1rem;
+}
+
+.input-group-rounded .input-group-label {
+  border-radius: 10px 0 0 10px;
   padding-left: 1rem;
 }

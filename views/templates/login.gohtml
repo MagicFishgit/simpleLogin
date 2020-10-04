@@ -10,25 +10,29 @@
     <link rel="stylesheet" href="../../views/css/foundation-icons.css" />
   </head>
   <body>
-    <div class="grid-x borderOutline">
-      <div class="cell grid-y auto grid-frame borderOutline">
-        <p class="borderOutline">Login</p>
+    <div class="grid-x">
+      <div class="cell grid-y auto grid-frame">
+        <p>Login</p>
 
         <!--Form Start-->
-        <form data-abide>
+        <!--need to add data-abide for form validation.-->
+        <form>
           <div class="grid-x grid-padding-x">
             <div class="large-12 cell input-group input-group-rounded">
-              <span class="input-group-label"
-                ><i class="fi-arrow-left"></i
-              ></span>
+              <span class="input-group-label"><i class="fi-torso"></i></span>
               <input
                 class="input-group-field"
                 type="email"
                 placeholder="Username or email"
               />
             </div>
-            <div class="large-12 cell">
-              <input type="password" placeholder="Password" />
+            <div class="large-12 cell input-group input-group-rounded">
+              <span class="input-group-label"><i class="fi-key"></i></span>
+              <input
+                class="input-group-field"
+                type="password"
+                placeholder="Password"
+              />
             </div>
           </div>
           <div class="grid-x grid-padding-x">
@@ -42,7 +46,7 @@
         <!--Form End-->
       </div>
 
-      <div class="cell grid-y auto borderOutline sideBackground">
+      <div class="cell grid-y auto sideBackground">
         <!--empty-->
       </div>
     </div>
