@@ -14,9 +14,69 @@
 .input-group-rounded .input-group-field {
   border-radius: 0 10px 10px 0;
   padding-left: 1rem;
+  border-color: pink;
 }
 
 .input-group-rounded .input-group-label {
   border-radius: 10px 0 0 10px;
-  padding-left: 1rem;
+
+  background-color: white;
+  border-color: pink;
+}
+
+.input-group-rounded .input-group-button {
+  border-radius: 10px 0 0 10px;
+
+  background-color: white;
+  border-color: pink;
+}
+
+.topPadding {
+  padding-top: 5%;
+}
+
+.roundedBtn {
+  border-radius: 10px 10px 10px 10px;
+  background-color: pink;
+}
+
+.remCheckboxLabel {
+  color: grey;
+}
+
+.forgotPass {
+  color: grey;
+}
+
+h4 {
+  display: flex;
+  flex-direction: row;
+  color: pink;
+}
+h4:before,
+h4:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid pink;
+  margin: auto;
+  margin-right: 18%;
+  margin-left: 18%;
+}
+h4:before {
+  margin-right: 10px;
+}
+h4:after {
+  margin-left: 10px;
+}
+
+.fi-social-github {
+  font-size: 1.8em;
+}
+
+.fi-social-twitter {
+  font-size: 1.8em;
+}
+
+.fi-social-google-plus {
+  font-size: 1.8em;
 }
