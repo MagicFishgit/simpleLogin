@@ -11,16 +11,29 @@ var tpl *template.Template
 
 //Parsing initial templates removes need to parse at response function.
 func init() {
-	tpl = template.Must(template.ParseGlob("views/*.gohtml"))
+	tpl = template.Must(template.ParseGlob("views/templates/*.gohtml"))
 }
 
 //Router
 func main() {
-	http.HandleFunc("/", login)
+	http.HandleFunc("/", index)
 	http.HandleFunc("/register/", register)
 	http.HandleFunc("/login/", login)
 
+	//Static Fileserver
+	fs := http.StripPrefix("/views/", http.FileServer(http.Dir("views")))
+	http.Handle("/views/", fs)
+
 	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":8080", fs)
+}
+
+//Index page handler
+func index(w http.ResponseWriter, req *http.Request) {
+	err := tpl.ExecuteTemplate(w, "index.gohtml", nil)
+	if err != nil {
+		log.Fatalln(w, http.StatusInternalServerError, err)
+	}
 }
 
 //Login page handler

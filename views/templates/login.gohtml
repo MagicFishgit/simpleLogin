@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../../views/css/foundation.css" />
+    <link rel="stylesheet" href="../../views/css/simpleLogin.css" />
+    <link rel="stylesheet" href="../../views/css/foundation-icons.css" />
+  </head>
+  <body>
+    <div class="grid-x">
+      <div class="cell grid-y auto grid-frame topPadding">
+        
+        <div class="flex-container" style="justify-content: space-around;">
+            <!--Form Start-->
+        <!--need to add data-abide for form validation.-->
+        <form>
+          <div class="grid-x grid-padding-x">
+            <div class="large-12 cell input-group input-group-rounded">
+              <span class="input-group-label"><i class="fi-torso"></i></span>
+              <input
+                class="input-group-field"
+                type="email"
+                placeholder="Username or email"
+              />
+            </div>
+            <div class="large-12 cell input-group input-group-rounded">
+              <span class="input-group-label"><i class="fi-key"></i></span>
+              <input
+                class="input-group-field"
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+          </div>
+        </form>
+        <!--Form End-->
+        </div>
+
+        <div class="flex-container" style="justify-content: space-around;">
+          <div class="grid-x grid-padding-x grid-padding-y" style="width: 60%;">
+            <div class="small-6 cell">
+              <input id="remembermeCheckbox" type="checkbox" /><label for="remembermeCheckbox"
+                class="remCheckboxLabel">Remember me?</label
+              ><br>
+              <a href="#" class="forgotPass">Register now?</a>
+            </div>
+            <div class="small-6 cell" style="text-align: end">
+              <a href="#" class="expanded button roundedBtn">LOGIN</a>
+              <a href="#" class="forgotPass">Forgot password?</a>
+            </div>
+          </div>
+        </div> 
+        <h4>or</h4>
+        <div class="flex-container" style="justify-content: space-around; padding-top: 10%;">
+          <div class="grid-x" style="width: 60;">
+            <div class="large-12 cell input-group input-group-rounded">
+              <span class="input-group-label" style="background-color: white;"><i class="fi-social-github"></i></span>
+              <div class="input-group-button">
+                <input type="submit" class="button" value="LOGIN WITH GITHUB&nbsp;&nbsp;" style="background-color: white; color: black; border-color: pink; border-radius: 0 10px 10px 0;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-container" style="justify-content: space-around;">
+          <div class="grid-x" style="width: 60;">
+            <div class="large-12 cell input-group input-group-rounded">
+              <span class="input-group-label"><i class="fi-social-twitter"></i></span>
+              <div class="input-group-button">
+                <input type="submit" class="button" value="LOGIN WITH TWITTER" style="background-color: white; color: black; border-color: pink; border-radius: 0 10px 10px 0;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-container" style="justify-content: space-around;">
+          <div class="grid-x" style="width: 60;">
+            <div class="large-12 cell input-group input-group-rounded">
+              <span class="input-group-label"><i class="fi-social-google-plus"></i></span>
+              <div class="input-group-button">
+                <input type="submit" class="button" value="LOGIN WITH GOOGLE&nbsp;" style="background-color: white; color: black; border-color: pink; border-radius: 0 10px 10px 0;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cell grid-y auto sideBackground">
+        <!--empty-->
+      </div>
+    </div>
+
+    <script src="../../views/js/vendor.js"></script>
+    <script src="../../views/js/foundation.js"></script>
+  </body>
+</html>
